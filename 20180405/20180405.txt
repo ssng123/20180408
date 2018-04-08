@@ -1,0 +1,56 @@
+<Ruby on Rails>
+ : 루비, MVC 패턴 이용. CRUD (생성 create, 읽기 read, 갱신 update, 삭제 delete) 작업 구현.
+ => MVC 패턴을 통해서 CRUD 를 구현한다 !
+ 굉장히 빠르게 프로토타이핑 할 수 있다. ex. github, airbnb 
+ 
+
+rails new 프로젝트명 => ls => rails s [server] : 레일즈라는 서버를 켠다  <=> ctrl + c
+get / post 外 : "http method"
+ - get은 url이 보이고 post는 보이지 않는다는 차이점이 있다. 
+
+framework : 쉽게 만들 수 있도록 다른 사람이 이미 만들어 둔 규칙같은 것. (다 알 필요 X)
+ Ruby / Rails 만의 코드를 보면서 모든 걸 이해하려 하지 마세요 ! 그냥 적절히 사용하면 됨.
+
+
+Project_1 안에서 ***
+> app 폴더가 제일 중요해요. 
+>> assets, models, controllers, views 만 알아도 됨.  cf. MVC (Model-Controller-View)
+  assets : 한 곳에서 관리한다 -> 더 빨라짐 !
+  models : loop에서 do ~ end (블록을 큼직하게 하나로 묶어줄 때 사용하는 것), class가 뭔지 몰라도 됨.
+  view : erb => <%= ~~ %> 와 같은 것을 써서, markup 언어 안에 프로그래밍 언어 삽입할 수 있도록 함. (구분 : 안에 루비 언어를 넣는다는 것을 알려줌)
+> config : configuration (설정)
+>> routes.rb : Rails.application.routes.draw do ~~ end (여러 코드를 묶어주는 기능을 하는 파일, 안에다가 코드를 넣을 거야) 길 -> 어떤 걸 눌러서 어디로 가게끔 안내하는 기능. cf. 지도 (버튼을 눌렀을 때, 어떤 링크로 갈 수 있도록 미리 지정해 두는 것)
+> public : 404, 422, 500 ...
+> Gemfile : 루비에서는 독립적으로 돌아갈 수 있는 프로그램을 만들어서 뿌리는데, 그때 gem(보석)이란 이름을 붙여서 공유함. #컨셉 좋아함ㅋㅋㅋㅋ : 규칙만 알면 쉽고 빠르게 개발할 수 있게 한다 !
+ 이 Rails가 돌아가기 위해 이런 gem들이 필요하다는 것을 나타낸 파일 (기능들을 입력하면 rails 코드 안에 들어올 수 있게 됨! 따라서 좋은 gem을 찾아서 가지고 올 수 있어야 함. 진짜 없는 것만 직접 개발)
+
+Static Web Page : (HTML 코드처럼 반응하지 않는 것) 사용자와 서버 간의 interaction이 있어야 하는데, 사람과 상호작용하는 요소가 전혀 없는 것. input, formtag 같은 게 있어야 static web page에서 벗어날 수 있다.
+ cf. rails안에 public 폴더 내에는 대부분 저런 거임. Rails 코드가 필요 없는 것.
+ : 단순 정보 전달, 에러 메시지 페이지 등. => 로그인, 메시지, 좋아요, 댓글 등은 불가능.
+
+Dynamic Web Page : interaction에 따라 바뀌는 웹 페이지. ex. 코딩대회 사이트
+ 사이트 .com/ 다음에 있는 것을 주목해보자! deploy - 본인 만의 주소를 만듦!
+ - 브라우저에 사용자가 직접 타이핑해서 쓰는 것 : get 방식.
+ * MVC 패턴 (웹사이트 사용 순서도) : 브라우저 (/users : 주소. heeham.com/intro.html 같은 거.) -> Rails Router (routes.rb : 길, routes에서 접근하는 하나의 길) -> index (/users = /users/index 라는 의미임 : 있는 길이라 찾아갈 수 있다는 의미) : ACTION -> Controller [중앙, 관제탑 느낌] -> Model <-> DB (데이터베이스, 데이터를 저장하는 곳, 필요한 데이터를 주고받는 느낌) -> 필요한 정보 DB에서 찾아서 다시 controller로 복귀 -> View <-> Controller : @users (루비 변수, controller가 HTML에서 사용할 수 있게끔 View에 전달 cf. '.erb'파일 : embedded ruby => html.erb가 되도록) -> 다시 controller로 오면 사용자에게 화면이 뜨게 됨.
+ => 이 FLOW를 배우고 실습하면 돼요 ! 
+ : 사용자가 주소를 입력하면 맞는 길인지 확인하고, Model에서 데이터를 찾아서 View에서 HTML 조합한 다음에 browser로 전달하는 과정. 
+
+다시 터미널에서,
+rails generate controller home index
+ > create 
+
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+$ rails g(enerate) controller 컨트롤러명 액션명
+ get 'home/index' => 'home#index' : Home controller 안에 있는 index action으로 가는 것.
+ : 이걸 분석할 줄 알면 어디에서 문제가 생기는지 알 수 있음. 
+
+
+
+
+
+
+  
+
+ 
+ 
+ 

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Project1</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <%= yield %> <!-- index.html.erb 가 이 안에 포함될 거야. -->
+  </body>
+</html>
+
+
+<!-- Rails에서 쓰는 코드는 이러한 template를 쓰겠다는 의미. 
+Head에 있는 부분은 고정되어 사용된다. 
+대신 Body에 작성하는 부분만 달라진다 : yield 
+이렇기 때문에 개발 속도가 확 올라간다! -->

@@ -1,0 +1,21 @@
+<div class="wrapper">
+  <div class="card">
+    <div class="image_box">
+      <%= image_tag("flowers.jpeg", class: "profile")%>
+    </div>
+
+    <div class="title">
+      <% if !flash["err"] %>
+        반가워 ( •◡-)✧˖° ♡
+      <% else %>
+        <%= flash["err"] %>
+      <% end %>
+    </div>
+
+    <div class="welcome">
+        SUCCESS! <br>
+        안녕 <%= @name %> (ˊ• ૢ·̫•ˋ ૢ)
+      <!-- There will be the name you've been entered. Say Hello! -->
+    </div>
+  </div>
+</div>

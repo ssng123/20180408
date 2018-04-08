@@ -1,0 +1,19 @@
+<div class="wrapper">
+  <div class="card">
+    <div class="image_box">
+      <%= image_tag("brown_candle.jpg", class: "profile")%>
+    </div>
+
+    <div class="title">
+      <% if !flash["err"] %>
+        Welcome to BROWN's Birthday!
+      <% else %>
+        <%= flash["err"] %>
+      <% end %>
+    </div>
+
+    <div class="welcome">
+      Have a good time <%= @name %> :)  <!-- 여기서 내가 친 이름이 넘어옴. 내부적으로 치환되는 것 ! -->
+    </div>
+  </div>
+</div>

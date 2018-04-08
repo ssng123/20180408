@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Practice</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <%= yield %>  <!-- index.html.erb will be embedded into this. -->
+  </body>
+</html>
+
+
+<!-- This means the code written in Rails will use the template like this.
+     Head will not change, it will follow these rules.
+     However, the code written in the body part will be changes.
+     Therefore, the speed of the development will be much more fatser with Ruby :P -->
+
+

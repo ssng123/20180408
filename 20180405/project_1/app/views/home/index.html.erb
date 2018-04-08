@@ -1,0 +1,37 @@
+<!-- <h1>Home#index</h1> -->
+<!-- : 홈 컨트롤러에 있는 index라는 액션이라는 뜻 --> 
+<!-- <p>Find me in app/views/home/index.html.erb</p> -->
+<!-- 하나의 액션은 하나의 template와 연결된다.
+ *template : 미리 정해진 양식을 재활용한다는 뜻.
+             공유되는 큰 틀의 format이 있고, 그 안의 contents만 바뀔 수 있도록 -->
+<!-- 자동으로 index로 연결되는 이유는? : -->
+
+
+<!-- Name : <%= @myName %> --> <!-- HTML 안에 루비 사용할 수 있게 해 주는 것-->
+<!-- Password : <%= @myPassword %> -->
+
+
+<div class="wrapper">
+  <div class="card">
+    <div class="image_box">
+      <%= image_tag("brown_candle.jpg", class: "profile")%>
+    </div>
+
+    <div class="title">
+      <% if !flash["err"] %>
+        Welcome to BROWN's Birthday!
+      <% else %>
+        <%= flash["err"] %>
+      <% end %>
+
+    </div>
+
+    <div class="user_form">
+      <form class="user_form" action="/login" method="post"> <!-- post 'home/login' => 'home#login' -->
+        <input class="input_box" type="text" name="id" value="" placeholder="Name">
+        <input class="input_box input_bottom" type="password" name="pw" value="" placeholder="Password">
+        <input class="submit_btn" type="submit" value="Go">
+      </form>
+    </div>
+  </div>
+</div>

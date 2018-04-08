@@ -1,0 +1,92 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .wrapper {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .card {
+    width: 300px;
+    height: 500px;
+    border-radius: 10px;
+    border: 1px solid #b59446;
+    overflow: hidden;
+  
+    .image_box {
+      height: 200px;
+      background-color: #ffffce;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  
+      .profile {
+        width: 100px;
+        border-radius: 50%;
+        border: 1px solid #d2d2d2;
+      }
+    }
+  
+    .title {
+      height: 70px;
+      // background-color: #ebebeb;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin: 0px 10px;
+      border-bottom: 2px solid #bf8f1c;
+    }
+  
+    .user_form {
+      height: 230px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      .input_box {
+        display: block;
+        width: 250px;
+        height: 40px;
+        border: 1px solid #ebebeb;
+        border-bottom: 0px;
+        font-size: 1.2rem;
+        padding-left: 10px;
+      }
+      .input_bottom {
+        border-bottom: 1px solid #ebebeb;
+        margin-bottom: 20px;
+  
+      }
+  
+      .submit_btn {
+        width: 100px;
+        height: 40px;
+        border: 1px solid #b5721d;
+        border-radius: 10px;
+        background-color: #b5721d;
+        color: white;
+        font-size: 1.2rem;
+      }
+    }
+  
+    .welcome {
+      height: 230px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+  }

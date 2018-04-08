@@ -1,0 +1,38 @@
+1. git : https://github.com/NEXT-LIKELION/Week1 [git 명령어]
+   vagrant up (전원 켜기) / vagrant ssh (로그인) / cd /vagrant : 우분투를 통해 가상환경 구축
+   /vagrant = /next (컴퓨터랑 가상환경이랑 같게 접근할 수 있도록 줌)
+   폴더 = directory
+   commit : 저장하는 행위 (버전을 남기는 것) git은 version control system -> 버전 간 차이를 빠르게 찾을 수 있음. + 한 파일의 변경점을 관리할 수 있음 [폴더 하나를 바라본다는 의미!]
+
+2. f12 ctrl shift c
+
+3. - Selector 
+	=> A > B : 바로 밑에 자식, A B : 어딘가 아래 있는 거
+   - <p> <li> 가 있을 때,
+	p > li : 바로 밑에 자식 (직속만 가능, 한 단계 안쪽만)
+	p li : p 안쪽에 있는 모든 것을 선택
+	p, li : p와 li 선택
+
+4. pseudo-class :
+ .link {font-color:red}
+ .link :hover {font-color:black}  : hover (마우스 위에 올려뒀을 때 색이 검정으로 바뀌게)
+- pseudo-class : 실제로 코드 상에 존재하지는 않지만, 서술해서 영향을 주는 것..?
+
+5. !important : 쓰지 마여 (코드의 흐름이 떨어짐, 어디서 고장났는지 찾기 힘듦. 위에서부터 작성)
+
+6. 스타일시트와 html 분리해서 사용 : in-line 스타일링 하면 css보다 우선 (important처럼) 그래서 디버깅이 어려울 수 있어요
+
+7. *** Box Model ***  //코드카데미 복습할 것 !
+
+ : 큰 것부터 작게 접근해야 한다. (카드 형으로 레이아웃 짜는 것이 중요)
+ <div> : 박스 만드는 것. padding : 제일 안쪽 content와 border 사이 간격을 주는 것. 최외곽은 border.
+기본적으로 css를 안 건드리면 content-box로 되어 있음. 이걸 border-box로 바꾸면 수치가 달라짐.
+box-size-border : border (보이는 것) 기준으로 사이즈 만듦.
+margin은 안 다룸. 최외곽 요소인 border와 border의 간격을 주는 것.
+44p  앞 : 화면에서 사라짐 / 후자 : 보이지만 않지만 위치는 차지.
+45p : rgba / hsla / #hexa : 투명도도 조절 가능
+46p : float : 안에 배치하고 싶을 때 / clear : float 속성을 없애고 싶을 때 (잘 안 나옴)
+51p : overflow : hidden ;부모한테 줘야함. 안그러면 그 둥근 테두리 안에 색이 빠져나오는 현상 발생 ! 
+
+8. Alignment : 텍스트 가운데 정렬, 박스 안에 박스 
+*** Flex : 66p 그림 참고 ! ! ! 

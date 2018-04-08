@@ -1,0 +1,24 @@
+<div class="wrapper">
+  <div class="card">
+    <div class="image_box">
+      <%= image_tag("flowers.jpeg", class: "profile")%>
+    </div>
+
+    <div class="title">
+      <% if !flash["err"] %>
+        반가워 ( •◡-)✧˖° ♡
+      <% else %>
+        <%= flash["err"] %>
+      <% end %>
+
+    </div>
+
+    <div class="user_form">
+      <form class="user_form" action="/login" method="post"> <!-- post 'home/login' => 'home#login' -->
+        <input class="input_box" type="text" name="id" value="" placeholder="Name">
+        <input class="input_box input_bottom" type="password" name="pw" value="" placeholder="Password">
+        <input class="submit_btn" type="submit" value="Go">
+      </form>
+    </div>
+  </div>
+</div>
